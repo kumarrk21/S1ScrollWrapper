@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>S1ScrollWrapperExVFPage</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>S1ScrollWrapper</members>
-        <members>S1ScrollWrapperBody</members>
-        <members>S1ScrollWrapperBottom</members>
-        <members>S1ScrollWrapperExApp</members>
-        <members>S1ScrollWrapperExComp</members>
-        <members>S1ScrollWrapperTop</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <version>36.0</version>
+	<types>
+		<members>S1ScrollWrapperExVFPage</members>
+		<members>S1ScrollerWithoutExVFPage</members>
+		<members>S1ScrollerWithoutExCSSOverride</members>
+		<name>ApexPage</name>
+	</types>
+	<types>
+		<members>S1ScrollWrapper</members>
+		<members>S1ScrollWrapperBody</members>
+		<members>S1ScrollWrapperBottom</members>
+		<members>S1ScrollWrapperExApp</members>
+		<members>S1ScrollWrapperExComp</members>
+		<members>S1ScrollWrapperTop</members>
+		<members>S1ScrollerWithoutExComp</members>
+		<members>S1ScrollerWithoutExApp</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	<version>36.0</version>
 </Package>

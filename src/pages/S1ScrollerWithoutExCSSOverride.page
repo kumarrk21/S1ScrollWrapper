@@ -1,0 +1,28 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardController="Account">
+    <style>
+	    html,
+	    html body {
+	        overflow: visible;
+	        -webkit-overflow-scrolling: touch;
+	    }
+	    
+	    body {
+	        position: absolute;
+	        left: 0;
+	        right: 0;
+	        top: 0;
+	        bottom: 0;
+	    }
+    </style>
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+    $Lightning.use("c:S1ScrollerWithoutExApp", function() {
+        $Lightning.createComponent("c:S1ScrollerWithoutExComp", {},
+            "lightning",
+            function(cmp) {
+                // do some stuff
+            });
+    });
+    </script>
+</apex:page>

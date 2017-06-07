@@ -1,7 +1,7 @@
-<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,force:lightningQuickAction">
     <aura:attribute name="iter" type="Object" />
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
-    <c:S1ScrollWrapper topHeight="50" bottomHeight="60">
+    <c:S1ScrollWrapper topHeight="50" bottomHeight="65">
         <c:S1ScrollWrapperTop>
             <lightning:layout horizontalAlign="spread" pullToBoundary="small">
                 <lightning:layoutItem size="6" flexibility="grow" padding="around-small">
@@ -12,7 +12,9 @@
                 </lightning:layoutItem>
             </lightning:layout>
         </c:S1ScrollWrapperTop>
+
         <c:S1ScrollWrapperBody >
+            
             <aura:iteration items="{!v.iter}" var="item">
                 <p>Item No. {!item}</p>
             </aura:iteration>
@@ -43,6 +45,7 @@
                 <li>List Item</li>
             </ul>
             <ui:inputTextArea aura:id="comments2" value="some more comments" rows="5" />
+        
         </c:S1ScrollWrapperBody>
         <c:S1ScrollWrapperBottom >
             <lightning:layout horizontalAlign="spread" pullToBoundary="small" class="slds-border--top">
@@ -58,8 +61,9 @@
                 <lightning:layoutItem size="3" flexibility="grow" padding="around-small" class="slds-align--absolute-center">
                         <lightning:icon iconName="action:more" size="small" />
                 </lightning:layoutItem>
-               
-             </lightning:layout>
+            </lightning:layout>
+            
+         
         </c:S1ScrollWrapperBottom>
     </c:S1ScrollWrapper>
 </aura:component>
