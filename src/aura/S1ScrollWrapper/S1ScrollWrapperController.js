@@ -10,7 +10,11 @@
                 helper.resizeWindow(cmp);
             });
         }
-        console.log('Inited')
+        var cmpGlobalID = cmp.getGlobalId()
+        cmpGlobalID = cmpGlobalID.replace(/\D+/g, '')
+        cmp.set('v.topCSSName','scrollTop'+cmpGlobalID);
+        cmp.set('v.bottomCSSName','scrollBottom'+cmpGlobalID);
+        cmp.set('v.bodyCSSName','scrollContainerBody'+cmpGlobalID);
 
     },
 

@@ -10,6 +10,10 @@
     <aura:attribute name="scrollBottom" type="Aura.Component[]">
         <div></div>
     </aura:attribute>
+    <aura:attribute name="topCSSName" type="String" default="scrollTop"/>
+    <aura:attribute name="bottomCSSName" type="String" default="scrollBottom"/>
+    <aura:attribute name="bodyCSSName" type="String" default="scrollContainerBody"/>
+
     <aura:attribute name="reCalculateDim" type="Boolean" default="true" />
     <aura:attribute name="addStyle" type="Boolean" default="false" />
     <aura:attribute name="height" type="String" default="100px" />
@@ -22,26 +26,26 @@
     <div>
         <aura:if isTrue="{!v.addStyle}">
             <style>
-            .scrollContainerBody {
+            .{!v.bodyCSSName} {
                 height: {!v.height};
                 width: 100%
             }
-            .scrollTop{
+            .{!v.topCSSName}{
                 height: {!v.topHeight+'px'};
                 width: 100%
             }
-            .scrollBottom{
+            .{!v.bottomCSSName}{
                 min-height: {!v.bottomHeight+'px'};
                 max-width: 100%
             }
             </style>
-            <ui:scrollerWrapper class="scrollTop">
+            <ui:scrollerWrapper class="{!v.topCSSName}">
                 {!v.scrollTop}
             </ui:scrollerWrapper>
-            <ui:scrollerWrapper aura:id="_scrollWrapper" class="scrollContainerBody">
+            <ui:scrollerWrapper aura:id="_scrollWrapper" class="{!v.bodyCSSName}">
                 {!v.scrollBody}
             </ui:scrollerWrapper>
-            <ui:scrollerWrapper class="scrollBottom">
+            <ui:scrollerWrapper class="{!v.bottomCSSName}">
                 {!v.scrollBottom}
             </ui:scrollerWrapper>
         </aura:if>

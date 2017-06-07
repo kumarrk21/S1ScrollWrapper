@@ -26,6 +26,7 @@
         <li>List Item</li>
     </ul>
     <ui:inputTextArea aura:id="comments1" label="More Comments" value="My comments" rows="5" />
+     <button class="slds-button slds-button--neutral" onclick="{!c.showModal}">Show Modal</button>
     <ul>
         <li>Some random stuff</li>
         <li>List Item</li>
@@ -53,4 +54,24 @@
             <lightning:icon iconName="action:more" size="small" />
         </lightning:layoutItem>
     </lightning:layout>
+      <div aura:id="_modal" id="_modal" class="slds-hide">
+            <div aria-hidden="false" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-open">
+                <div class="slds-modal__container slds-modal--prompt">
+                    <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                        <h2 id="_modalHeader" class="slds-text-heading--medium">Header</h2>
+                    </div>
+                    <div class="slds-modal__content">
+                        <div>
+                            <p id="_modalBody">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="slds-modal__footer slds-theme--default">
+                        <div class="slds-x-small-buttons--horizontal">
+                            <button class="slds-button slds-button--neutral" onclick="{!c.hideModal}">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </div>
 </aura:component>
