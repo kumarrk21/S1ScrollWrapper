@@ -35,6 +35,6 @@ You can either deploy these components in your dev org using the 'Deploy to Sale
 </a>
 
 [ui:scrollWrapper]: <https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref_ui_scrollerWrapper.htm>
-[S1ScrollWrapperExComp]: <https://github.com/kumarrk21/S1ScrollWrapper>
-[S1ScrollWrapperExVFPage]: <https://github.com/kumarrk21/S1ScrollWrapper>
+[S1ScrollWrapperExComp]: <https://github.com/kumarrk21/S1ScrollWrapper/tree/master/src/aura/S1ScrollWrapperExComp>
+[S1ScrollWrapperExVFPage]: <https://github.com/kumarrk21/S1ScrollWrapper/blob/master/src/pages/S1ScrollWrapperExVFPage.page>
 [package]: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a00000024Tw>
