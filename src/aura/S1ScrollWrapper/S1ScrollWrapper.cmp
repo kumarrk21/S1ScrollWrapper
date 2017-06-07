@@ -1,0 +1,50 @@
+<aura:component >
+    <aura:attribute name="topHeight" type="Integer" default="0" access="GLOBAL" required="true"/>
+    <aura:attribute name="bottomHeight" type="Integer" default="0" access="GLOBAL" required="true"/>
+    <aura:attribute name="scrollBody" type="Aura.Component[]">
+        <div></div>
+    </aura:attribute>
+    <aura:attribute name="scrollTop" type="Aura.Component[]">
+        <div></div>
+    </aura:attribute>
+    <aura:attribute name="scrollBottom" type="Aura.Component[]">
+        <div></div>
+    </aura:attribute>
+    <aura:attribute name="reCalculateDim" type="Boolean" default="true" />
+    <aura:attribute name="addStyle" type="Boolean" default="false" />
+    <aura:attribute name="height" type="String" default="100px" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <!-- this event is only supported from API version 40.0, so for now using the 'afterRenderer' -->
+    <!--<aura:handler name="render" value="{!this}" action="{!c.onRender}" />-->
+
+    <div aura:id="_stake" id="_stake" />
+    <div>
+        <aura:if isTrue="{!v.addStyle}">
+            <style>
+            .scrollContainerBody {
+                height: {!v.height};
+                width: 100%
+            }
+            .scrollTop{
+                height: {!v.topHeight+'px'};
+                width: 100%
+            }
+            .scrollBottom{
+                min-height: {!v.bottomHeight+'px'};
+                max-width: 100%
+            }
+            </style>
+            <ui:scrollerWrapper class="scrollTop">
+                {!v.scrollTop}
+            </ui:scrollerWrapper>
+            <ui:scrollerWrapper aura:id="_scrollWrapper" class="scrollContainerBody">
+                {!v.scrollBody}
+            </ui:scrollerWrapper>
+            <ui:scrollerWrapper class="scrollBottom">
+                {!v.scrollBottom}
+            </ui:scrollerWrapper>
+        </aura:if>
+        
+    </div>
+</aura:component>

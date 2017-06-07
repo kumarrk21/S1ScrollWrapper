@@ -1,0 +1,44 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <aura:attribute name="iter" type="Object" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <c:S1ScrollWrapper topHeight="50" bottomHeight="50">
+        <c:S1ScrollWrapperTop>
+            <p>Top bar</p>
+        </c:S1ScrollWrapperTop>
+        <c:S1ScrollWrapperBody >
+            <aura:iteration items="{!v.iter}" var="item">
+                <p>Item No. {!item}</p>
+            </aura:iteration>
+            <ui:inputTextArea aura:id="comments" value="My comments" rows="5" />
+            <ul>
+                <li>Some random stuff</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ul>
+            <ui:inputTextArea aura:id="comments1" label="More Comments" value="My comments" rows="5" />
+            <ul>
+                <li>Some random stuff</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ul>
+            <ui:inputTextArea aura:id="comments2" value="some more comments" rows="5" />
+        </c:S1ScrollWrapperBody>
+        <c:S1ScrollWrapperBottom >
+            <p>Bottom bar</p>
+        </c:S1ScrollWrapperBottom>
+    </c:S1ScrollWrapper>
+</aura:component>
