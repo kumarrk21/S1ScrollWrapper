@@ -1,2 +1,4 @@
-.THIS {
+.THIS .bar {
+	margin-left: -24px !important;
+	margin-right: -24px !important;
 }

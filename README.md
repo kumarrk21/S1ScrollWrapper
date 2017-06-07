@@ -25,7 +25,7 @@ A sample usage is provided below
 ```
 The above sample creates a top bar of height 50px, bottom bar of height 50px and places the body in the scrollable area. There is also a ready to use example component [S1ScrollWrapperExComp] provided in the src folder.
 
-In case of using this component in a VF page using Lightning Out, additional CSS need to be applied on the html and body tags. A sample is provided in the [S1ScrollWrapperExVFPage] provided in the src folder.
+In case of using this component in a VF page using Lightning Out, additional CSS need to be applied on the html and body tags. A sample is provided in the [S1ScrollWrapperExVFPage] within the src folder.
 
 You can either deploy these components in your dev org using the 'Deploy to Salesforce' link below or using the [package]
 
